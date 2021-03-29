@@ -5,9 +5,9 @@ app = Flask(__name__)
 def index():
     return "<h1>Why so easy</h1>"
 
-@app.route("/another")
-def show():
-    return "<h1>YO</h1>"
+@app.route("/user/<username>")
+def show(username):
+    return f"Hi {username}"
 
 if __name__ == "__main__":
     app.run()
